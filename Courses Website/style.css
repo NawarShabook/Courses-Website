@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; /*define google font 'Poppins'*/
+}
+.error {color: #FF0000;}
+/*Global Tags*/
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85)
+}
+
+span{
+    font-size: .9rem;
+    color: #757373;
+}
+
+h6{
+    font-size: 1.1rem;
+    color: rgb(24, 24, 49);
+}
+
+
+nav ul{
+    /*to put everything in on row*/
+    display: flex;
+    /* this part to be the end of the right */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li{
+    /* to remove point before li */
+    list-style: none;
+    /* to add space between li */
+    margin-left: 10px;
+    
+}
+.us{
+    color:rgb(31, 31, 94);
+    font-size: 130%;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.us:hover{
+    color:#fff;
+    text-shadow: 1px 1px 5px black, 1px 1px 5px blue,1px 1px 5px;
+    font-size: 132%;
+    cursor: pointer;
+}
+.user_name{
+    background-color: rgb(74, 74, 136);
+    color: #fff;
+    box-shadow: 1px 1px 5px black, 1px 1px 5px blue,1px 1px 5px ;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    text-align: center;
+    padding: 7px;
+    transition: 0.3s ease;
+}
+.user_name:hover{
+    background-color:#fff;
+    color:rgb(74, 74, 136);
+    box-shadow: 1px 1px 5px black, 1px 1px 5px blue,1px 1px 5px yellow,1px 1px 5px;
+    cursor: pointer;
+}
+.logo
+{
+    
+    color: rgb(70, 223, 70);
+    text-shadow: 1px 1px 5px red, 1px 1px 5px blue,1px 1px 5px yellow,1px 1px 5px;
+    transition: 0.4s ease;
+}
+.logo:hover{
+    color: white;
+    text-shadow: 1px 1px 5px black, 1px 1px 5px blue,1px 1px 5px yellow,1px 1px 5px;
+    cursor: pointer;
+}
+/*Navigation*/
+nav{
+    
+    /* put navigation alwayes top f screen */
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* top an bottom is (1) right and left is (8) */
+    padding: 1vw 6vw;
+    /*box-shadow: x y radius color*/
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+
+nav img{
+    /* the pointer trans when go on img */
+    cursor: pointer; 
+    width: 150px;
+    height:45px;
+}
+
+nav .navigation ul{
+    /*to put everything in on row*/
+    display: flex;
+    /* this part to be the end of the right */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .navigation ul li{
+    /* to remove point before li */
+    list-style: none;
+    /* to add space between li */
+    margin-left: 30px;
+}
+
+nav .navigation ul li a Button{
+    /* to remove line under words */
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+    color:rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer; 
+    /* for smooth change */
+    transition: 0.3s ease;
+}
+
+/* hover for when pointer be on word */
+nav .navigation ul li a Button:hover{
+
+    color:#FDC93B;
+}
+
+
+/* Home */
+
+#home{
+    background-image: linear-gradient(rgba(9,5,54,0.3), rgba(5,4,46,0.7)),
+    url(img/bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    /* for paragraph */
+    text-align: center;
+
+    padding-top: 40px;
+
+}
+#home h2{
+    color: #fff;
+    font-size: 2.rem;
+    /* distance between letters */
+    letter-spacing: 1px;
+}
+#home p{
+    width: 50%;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+
+#home .btn{
+    margin-top: 30px;
+}
+#home a Button{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding:13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}
+
+#home a Button.blue{
+    color: #fff;
+    background-color: rgb(21, 21, 100);
+    transition: 0.3s ease;
+}
+
+#home a Button.blue:hover{
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+
+#home a Button.yellow{
+    color: #fff;
+    background-color: #FDC93B;
+    transition: 0.3s ease;
+
+}
+
+#home a Button.yellow:hover{
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+
+/* features */
+
+#features{
+    /*top left bottom right*/
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+    
+}
+#features .fea-base{
+    /* The grid-template-columns property specifies the number (and the widths) of columns in a grid layout */
+    display: grid;
+    /* repeat for all elements, auto-fit for trans if win is small, 320the min  */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-gap: 1rem;
+    margin-top: 50px;
+    padding-right:10px;
+
+}
+
+#features .fea-box{
+    background-color: rgb(241, 240, 245);
+    text-align: start;
+    padding:25px 20px;
+}
+
+#features .fea-box i img{
+    width:  43px;
+    height: 47px;
+}
+
+#features .fea-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 0 7px 0;
+}
+
+#features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(46, 46, 59);
+    
+}
+#course{
+    padding: 8vw 8vw 8vw 8vw;
+    text-align: center;
+    z-index: -1;
+}
+
+#course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-gap: 1rem;
+    margin-top: 50px;
+
+}
+
+#course .courses{
+    text-align: center;
+    background-color: #F9F9FF;
+    height: 100%;
+    padding-bottom: 5px;
+    position: relative;
+    cursor: pointer; 
+
+}
+
+#course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s ease;
+}
+
+#course .courses img:hover{
+
+    opacity: 0.6;
+    width: 300px;
+    height: 150px;
+}
+
+#course .courses .details{
+    padding: 15px 15px 0 15px;
+}
+
+#course .courses .details i{
+    color: #FDC93B;
+    font-size: .9rem;
+}
+
+#course .courses .cost{
+    background-color: rgb(74, 74, 136);
+    color: #fff;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 100px;
+}
+
+/* quiz */
+#quiz{
+    padding: 8vw 8vw 8vw 8vw;
+    text-align: center;
+    z-index: -1;
+}
+#quiz .quiz-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-gap: 1rem;
+    margin-top: 50px;
+
+}
+#quiz .quizzes{
+    text-align: center;
+    background-color: #F9F9FF;
+    height: 100%;
+    padding-bottom: 5px;
+    position: relative;
+}
+#quiz .quizzes img{
+    width: 90%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s ease;
+}
+
+#quiz .quizzes img:hover{
+
+    opacity: 0.6;
+    width: 400px;
+    height: 200px;
+}
+
+/* registration */
+#registration{
+    padding: 8vw 8vw 6vw 8vw;
+    background-image: linear-gradient(rgba(99,112,168,0.5), rgba(81,91,233,0.5)),
+    url("img/signup.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /*display in one row instead on col*/
+    justify-content: space-between; 
+    /*space between*/
+    /* align-items: center; */
+    /* display: flex; to display in one row */
+}
+#registration .form{
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    /*display in one row instead on col*/
+    margin: auto;
+    flex-direction: column;
+    padding: 10px 40px 40px 40px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+#registration .form h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+#registration .form h3
+{
+    text-align: center;
+}
+
+#registration .form input{
+    margin: 15px 0;
+    padding: 15px 10px;
+    border: 1px solid rgb(84, 40, 241);
+    outline: none;
+}
+
+#registration .form input::placeholder{
+    color:#413c3c ;
+    font-weight: 500;
+    font-size: 0.9rea/m;
+}
+
+#registration .form .btn{
+    margin-top: 20px;
+}
+
+#registration .yellow{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding:13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(21, 21, 100);
+    transition: 0.3s ease;
+} 
+
+#registration .yellow:hover{
+    color: #fff;
+    background-color: #FDC93B;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* The flex-wrap CSS property sets  whether
+     flex items are forced onto one line
+      or can wrap onto multiple lines. If wrapping is allowed,
+    it sets the direction that lines are stacked. */
+}
+footer .footer-col{
+    padding-bottom: 40px;
+}
+footer h3{
+    color:rgb(241, 240, 245);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+footer li:hover{
+    color: rgb(241, 240, 245);
+}
+
+footer p{
+    color: #7b838a;
+
+}
+
+footer .subscribe{
+    margin-top: 20px;
+    
+}
+
+footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background-color: #334F6c;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding:12px 15px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 3px;
+}
+footer .subscribe a.yellow{
+    color: #334F6c;
+    background-color: #FDC93B;
+    transition: 0.3s ease;
+
+}
+
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+footer .copyright p{
+    color:#fff
+}
+
+footer .copyright .pro-links{
+    margin-top: 0px;
+}
+footer .copyright .pro-links i{
+    padding-top: 17px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+footer .copyright .pro-links i:hover{
+    background-color: #FDC93B;
+    color: #2c2c2c;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+}
